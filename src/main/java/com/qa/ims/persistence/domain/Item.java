@@ -1,63 +1,54 @@
 package com.qa.ims.persistence.domain;
 
 public class Item {
-	private Long ID;
-	private String Name;
-	private Double Price;
 	
-	public Item(Long iD, String name, Double price) {
+	private Long itemId;
+	private String itemName;
+	private Double price;
+	
+	public Item(Long itemID, String itemName, Double price) {
 		super();
-		ID = iD;
-		Name = name;
-		Price = price;
+		this.setItemId(itemID);
+		this.setItemName(itemName);
+		this.setPrice(price);
 	}
-
-	public Item(String name, Double price) {
-		super();
-		Name = name;
-		Price = price;
-		
+	
+	public Item(String itemName, Double price) {
+		this.setItemName(itemName);
+		this.setPrice(price);
 	}
-
-	public Long getID() {
-		return ID;
+	
+	public Long getItemId() {
+		return itemId;
 	}
-
-	public void setID(Long iD) {
-		ID = iD;
+	public void setItemId(Long itemId) {
+		this.itemId = itemId;
 	}
-
-	public String getName() {
-		return Name;
+	public  String getItemName() {
+		return itemName;
 	}
-
-	public void setName(String name) {
-		Name = name;
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
 	}
-
-	public Double getPrice() {
-		return Price;
+	public  Double getPrice() {
+		return price;
 	}
-
 	public void setPrice(Double price) {
-		Price = price;
+		this.price = price;
 	}
-
-	@Override
+	
 	public String toString() {
-		return "Item [ID=" + ID + ", Name=" + Name + ", Price=" + Price + "]";
+		return "id:" + itemId + " item name:" + itemName + " price:" + price;
 	}
-
-	@Override
+		@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((ID == null) ? 0 : ID.hashCode());
-		result = prime * result + ((Name == null) ? 0 : Name.hashCode());
-		result = prime * result + ((Price == null) ? 0 : Price.hashCode());
+		result = prime * result + ((itemId == null) ? 0 : itemId.hashCode());
+		result = prime * result + ((itemName == null) ? 0 : itemName.hashCode());
+		result = prime * result + ((price == null) ? 0 : price.hashCode());
 		return result;
 	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -67,30 +58,24 @@ public class Item {
 		if (getClass() != obj.getClass())
 			return false;
 		Item other = (Item) obj;
-		if (ID == null) {
-			if (other.ID != null)
+		if (itemId == null) {
+			if (other.itemId != null)
 				return false;
-		} else if (!ID.equals(other.ID))
+		} else if (!itemId.equals(other.itemId))
 			return false;
-		if (Name == null) {
-			if (other.Name != null)
+		if (itemName == null) {
+			if (other.itemName != null)
 				return false;
-		} else if (!Name.equals(other.Name))
+		} else if (!itemName.equals(other.itemName))
 			return false;
-		if (Price == null) {
-			if (other.Price != null)
+		if (price == null) {
+			if (other.price != null)
 				return false;
-		} else if (!Price.equals(other.Price))
+		} else if (!price.equals(other.price))
 			return false;
 		return true;
 	}
 	
 	
 	
-	
-	
-	
-	
-
 }
-
