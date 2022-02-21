@@ -9,6 +9,7 @@ import org.mockito.Mockito;
 
 import com.qa.ims.controller.ItemController;
 import com.qa.ims.persistence.dao.ItemDAO;
+import com.qa.ims.persistence.domain.Item;
 import com.qa.ims.utils.Utils;
 
 public class ItemControllerTest {
