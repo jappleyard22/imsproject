@@ -128,10 +128,10 @@ public class CustomerDAO implements Dao<Customer> {
 	 * @param id - id of the customer
 	 */
 	@Override
-	public int delete(long cust_id) {
+	public int delete(long custId) {
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				PreparedStatement statement = connection.prepareStatement("DELETE FROM customers WHERE cust_id = ?");) {
-			statement.setLong(1, cust_id);
+			statement.setLong(1, custId);
 			return statement.executeUpdate();
 		} catch (Exception e) {
 			LOGGER.debug(e);
