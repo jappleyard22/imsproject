@@ -1,26 +1,26 @@
 package com.qa.ims.persistence.domain;
 
 public class Order {
-	private Long orderid;
+	private Long orderId;
 
-	public Order(Long orderid) {
+	public Order(Long orderId) {
 		super();
-		this.orderid = orderid;
+		this.orderId = orderId;
 	}
 
 	public Long getOrderid() {
-		return orderid;
+		return orderId;
 	}
 
 	public void setOrderid(Long orderid) {
-		this.orderid = orderid;
+		this.orderId = orderid;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((orderid == null) ? 0 : orderid.hashCode());
+		result = prime * result + ((orderId == null) ? 0 : orderId.hashCode());
 		return result;
 	}
 
@@ -33,10 +33,10 @@ public class Order {
 		if (getClass() != obj.getClass())
 			return false;
 		Order other = (Order) obj;
-		if (orderid == null) {
-			if (other.orderid != null)
+		if (orderId == null) {
+			if (other.orderId != null)
 				return false;
-		} else if (!orderid.equals(other.orderid))
+		} else if (!orderId.equals(other.orderId))
 			return false;
 		return true;
 	}
